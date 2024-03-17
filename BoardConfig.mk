@@ -29,12 +29,16 @@ TARGET_CPU_ABI2 :=
 TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
-TARGET_2ND_ARCH_VARIANT := armv7-a-neon
+TARGET_2ND_ARCH_VARIANT := armv8-a
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_BOARD_SUFFIX := _64
 TARGET_USES_64_BIT_BINDER := true
+
+# Bootloader
+TARGET_BOOTLOADER_BOARD_NAME := msm8953
+TARGET_NO_BOOTLOADER := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive
@@ -92,3 +96,4 @@ TW_USE_TOOLBOX := true
 	# NTFS and exFAT Support
 TW_INCLUDE_FUSE_NTFS := true
 TW_INCLUDE_FUSE_EXFAT := true
+TW_DEFAULT_LANGUAGE := en
