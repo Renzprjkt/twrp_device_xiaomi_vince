@@ -1,45 +1,5 @@
 <manifest version="2.0" type="framework">
     <hal format="hidl">
-        <name>android.frameworks.displayservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IDisplayService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IDisplayService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.frameworks.schedulerservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISchedulingPolicyService</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISchedulingPolicyService/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.frameworks.sensorservice</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISensorManager</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISensorManager/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.frameworks.stats</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IStats</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IStats/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>android.hidl.manager</name>
         <transport>hwbinder</transport>
         <version>1.2</version>
@@ -60,62 +20,18 @@
         <fqname>@1.0::IAllocator/ashmem</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.hidl.memory</name>
-        <transport arch="32+64">passthrough</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IMapper</name>
-            <instance>ashmem</instance>
-        </interface>
-        <fqname>@1.0::IMapper/ashmem</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.hidl.token</name>
+        <name>android.hardware.gatekeeper</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
         <interface>
-            <name>ITokenManager</name>
+            <name>IGatekeeper</name>
             <instance>default</instance>
         </interface>
-        <fqname>@1.0::ITokenManager/default</fqname>
+        <fqname>@1.0::IGatekeeper/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>android.system.suspend</name>
+        <name>android.hardware.keymaster</name>
         <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>ISystemSuspend</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::ISystemSuspend/default</fqname>
+        <fqname>@3.0::IKeymasterDevice/default</fqname>
     </hal>
-    <hal format="hidl">
-        <name>android.system.net.netd</name>
-        <transport>hwbinder</transport>
-        <version>1.1</version>
-        <interface>
-            <name>INetd</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.1::INetd/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>android.system.wifi.keystore</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IKeystore</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IKeystore/default</fqname>
-    </hal>
-    <hal format="native">
-        <name>netutils-wrapper</name>
-        <version>1.0</version>
-    </hal>
-    <system-sdk>
-        <version>28</version>
-        <version>29</version>
-        <version>30</version>
-    </system-sdk>
 </manifest>
