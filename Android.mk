@@ -14,11 +14,9 @@
 # limitations under the License.
 #
 
-ifeq ($(TARGET_DEVICE), vince)
-
 LOCAL_PATH := $(call my-dir)
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
-
+ifeq ($(TARGET_DEVICE),vince)
+include $(call all-makefiles-under,$(LOCAL_PATH))
 include $(CLEAR_VARS)
 endif
