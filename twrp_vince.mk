@@ -14,21 +14,22 @@
 # limitations under the License.
 #
 
-# Release name (automatically taken from this file's suffix)
-PRODUCT_RELEASE_NAME := $(lastword $(subst /, ,$(lastword $(subst _, ,$(firstword $(subst ., ,$(MAKEFILE_LIST)))))))
+# Release name
+PRODUCT_RELEASE_NAME := vince
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from our custom product configuration
 $(call inherit-product, vendor/twrp/config/common.mk)
 
-# Inherit device configuration
-$(call inherit-product, device/xiaomi/vince/device.mk)
-
 # Device identifier. This must come after all inclusions
-PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
-PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
+PRODUCT_DEVICE := vince
+PRODUCT_NAME := twrp_vince
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_MODEL := Redmi 5 Plus
+PRODUCT_MANUFACTURER := Xiaomi
+
+# Inherit from hardware-specific part of the product configuration
+$(call inherit-product, device/xiaomi/vince/device.mk)
