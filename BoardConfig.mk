@@ -116,5 +116,5 @@ TW_HAS_EDL_MODE := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-# Disable Mouse Cursor
-TW_INPUT_BLACKLIST := "hbtp_vm"
+# Recovery
+TARGET_RECOVERY_DEVICE_DIRS += $(DEVICE_PATH)
